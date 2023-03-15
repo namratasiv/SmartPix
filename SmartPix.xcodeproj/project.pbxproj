@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C899FDF29C19F9500424B97 /* SmartPixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C899FDE29C19F9500424B97 /* SmartPixApp.swift */; };
+		9C899FE129C19F9500424B97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C899FE029C19F9500424B97 /* ContentView.swift */; };
+		9C899FE329C19F9700424B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C899FE229C19F9700424B97 /* Assets.xcassets */; };
+		9C899FE629C19F9700424B97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C899FE529C19F9700424B97 /* Preview Assets.xcassets */; };
+		9C899FF029C19F9700424B97 /* SmartPixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C899FEF29C19F9700424B97 /* SmartPixTests.swift */; };
+		9C899FFA29C19F9700424B97 /* SmartPixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C899FF929C19F9700424B97 /* SmartPixUITests.swift */; };
+		9C899FFC29C19F9700424B97 /* SmartPixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C899FFB29C19F9700424B97 /* SmartPixUITestsLaunchTests.swift */; };
+		9C89A00A29C1A10000424B97 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C89A00929C1A10000424B97 /* PythonKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C899FEC29C19F9700424B97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C899FD329C19F9500424B97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C899FDA29C19F9500424B97;
+			remoteInfo = SmartPix;
+		};
+		9C899FF629C19F9700424B97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C899FD329C19F9500424B97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C899FDA29C19F9500424B97;
+			remoteInfo = SmartPix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C899FDB29C19F9500424B97 /* SmartPix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C899FDE29C19F9500424B97 /* SmartPixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPixApp.swift; sourceTree = "<group>"; };
+		9C899FE029C19F9500424B97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9C899FE229C19F9700424B97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C899FE529C19F9700424B97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9C899FEB29C19F9700424B97 /* SmartPixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartPixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C899FEF29C19F9700424B97 /* SmartPixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPixTests.swift; sourceTree = "<group>"; };
+		9C899FF529C19F9700424B97 /* SmartPixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartPixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C899FF929C19F9700424B97 /* SmartPixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPixUITests.swift; sourceTree = "<group>"; };
+		9C899FFB29C19F9700424B97 /* SmartPixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C899FD829C19F9500424B97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C89A00A29C1A10000424B97 /* PythonKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C899FE829C19F9700424B97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C899FF229C19F9700424B97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C899FD229C19F9500424B97 = {
+			isa = PBXGroup;
+			children = (
+				9C899FDD29C19F9500424B97 /* SmartPix */,
+				9C899FEE29C19F9700424B97 /* SmartPixTests */,
+				9C899FF829C19F9700424B97 /* SmartPixUITests */,
+				9C899FDC29C19F9500424B97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C899FDC29C19F9500424B97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C899FDB29C19F9500424B97 /* SmartPix.app */,
+				9C899FEB29C19F9700424B97 /* SmartPixTests.xctest */,
+				9C899FF529C19F9700424B97 /* SmartPixUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C899FDD29C19F9500424B97 /* SmartPix */ = {
+			isa = PBXGroup;
+			children = (
+				9C899FDE29C19F9500424B97 /* SmartPixApp.swift */,
+				9C899FE029C19F9500424B97 /* ContentView.swift */,
+				9C899FE229C19F9700424B97 /* Assets.xcassets */,
+				9C899FE429C19F9700424B97 /* Preview Content */,
+			);
+			path = SmartPix;
+			sourceTree = "<group>";
+		};
+		9C899FE429C19F9700424B97 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9C899FE529C19F9700424B97 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9C899FEE29C19F9700424B97 /* SmartPixTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C899FEF29C19F9700424B97 /* SmartPixTests.swift */,
+			);
+			path = SmartPixTests;
+			sourceTree = "<group>";
+		};
+		9C899FF829C19F9700424B97 /* SmartPixUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C899FF929C19F9700424B97 /* SmartPixUITests.swift */,
+				9C899FFB29C19F9700424B97 /* SmartPixUITestsLaunchTests.swift */,
+			);
+			path = SmartPixUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C899FDA29C19F9500424B97 /* SmartPix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C899FFF29C19F9700424B97 /* Build configuration list for PBXNativeTarget "SmartPix" */;
+			buildPhases = (
+				9C899FD729C19F9500424B97 /* Sources */,
+				9C899FD829C19F9500424B97 /* Frameworks */,
+				9C899FD929C19F9500424B97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartPix;
+			packageProductDependencies = (
+				9C89A00929C1A10000424B97 /* PythonKit */,
+			);
+			productName = SmartPix;
+			productReference = 9C899FDB29C19F9500424B97 /* SmartPix.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C899FEA29C19F9700424B97 /* SmartPixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C89A00229C19F9700424B97 /* Build configuration list for PBXNativeTarget "SmartPixTests" */;
+			buildPhases = (
+				9C899FE729C19F9700424B97 /* Sources */,
+				9C899FE829C19F9700424B97 /* Frameworks */,
+				9C899FE929C19F9700424B97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C899FED29C19F9700424B97 /* PBXTargetDependency */,
+			);
+			name = SmartPixTests;
+			productName = SmartPixTests;
+			productReference = 9C899FEB29C19F9700424B97 /* SmartPixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C899FF429C19F9700424B97 /* SmartPixUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C89A00529C19F9700424B97 /* Build configuration list for PBXNativeTarget "SmartPixUITests" */;
+			buildPhases = (
+				9C899FF129C19F9700424B97 /* Sources */,
+				9C899FF229C19F9700424B97 /* Frameworks */,
+				9C899FF329C19F9700424B97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C899FF729C19F9700424B97 /* PBXTargetDependency */,
+			);
+			name = SmartPixUITests;
+			productName = SmartPixUITests;
+			productReference = 9C899FF529C19F9700424B97 /* SmartPixUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C899FD329C19F9500424B97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					9C899FDA29C19F9500424B97 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					9C899FEA29C19F9700424B97 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 9C899FDA29C19F9500424B97;
+					};
+					9C899FF429C19F9700424B97 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 9C899FDA29C19F9500424B97;
+					};
+				};
+			};
+			buildConfigurationList = 9C899FD629C19F9500424B97 /* Build configuration list for PBXProject "SmartPix" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C899FD229C19F9500424B97;
+			packageReferences = (
+				9C89A00829C1A10000424B97 /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
+			productRefGroup = 9C899FDC29C19F9500424B97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C899FDA29C19F9500424B97 /* SmartPix */,
+				9C899FEA29C19F9700424B97 /* SmartPixTests */,
+				9C899FF429C19F9700424B97 /* SmartPixUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C899FD929C19F9500424B97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C899FE629C19F9700424B97 /* Preview Assets.xcassets in Resources */,
+				9C899FE329C19F9700424B97 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C899FE929C19F9700424B97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C899FF329C19F9700424B97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C899FD729C19F9500424B97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C899FE129C19F9500424B97 /* ContentView.swift in Sources */,
+				9C899FDF29C19F9500424B97 /* SmartPixApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C899FE729C19F9700424B97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C899FF029C19F9700424B97 /* SmartPixTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C899FF129C19F9700424B97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C899FFC29C19F9700424B97 /* SmartPixUITestsLaunchTests.swift in Sources */,
+				9C899FFA29C19F9700424B97 /* SmartPixUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C899FED29C19F9700424B97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C899FDA29C19F9500424B97 /* SmartPix */;
+			targetProxy = 9C899FEC29C19F9700424B97 /* PBXContainerItemProxy */;
+		};
+		9C899FF729C19F9700424B97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C899FDA29C19F9500424B97 /* SmartPix */;
+			targetProxy = 9C899FF629C19F9700424B97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9C899FFD29C19F9700424B97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C899FFE29C19F9700424B97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C89A00029C19F9700424B97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartPix/Preview Content\"";
+				DEVELOPMENT_TEAM = G94ZUBU66L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ciec.SmartPix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C89A00129C19F9700424B97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartPix/Preview Content\"";
+				DEVELOPMENT_TEAM = G94ZUBU66L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ciec.SmartPix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9C89A00329C19F9700424B97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G94ZUBU66L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ciec.SmartPixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartPix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartPix";
+			};
+			name = Debug;
+		};
+		9C89A00429C19F9700424B97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G94ZUBU66L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ciec.SmartPixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartPix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartPix";
+			};
+			name = Release;
+		};
+		9C89A00629C19F9700424B97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G94ZUBU66L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ciec.SmartPixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmartPix;
+			};
+			name = Debug;
+		};
+		9C89A00729C19F9700424B97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G94ZUBU66L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ciec.SmartPixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmartPix;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C899FD629C19F9500424B97 /* Build configuration list for PBXProject "SmartPix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C899FFD29C19F9700424B97 /* Debug */,
+				9C899FFE29C19F9700424B97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C899FFF29C19F9700424B97 /* Build configuration list for PBXNativeTarget "SmartPix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C89A00029C19F9700424B97 /* Debug */,
+				9C89A00129C19F9700424B97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C89A00229C19F9700424B97 /* Build configuration list for PBXNativeTarget "SmartPixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C89A00329C19F9700424B97 /* Debug */,
+				9C89A00429C19F9700424B97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C89A00529C19F9700424B97 /* Build configuration list for PBXNativeTarget "SmartPixUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C89A00629C19F9700424B97 /* Debug */,
+				9C89A00729C19F9700424B97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C89A00829C1A10000424B97 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C89A00929C1A10000424B97 /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C89A00829C1A10000424B97 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 9C899FD329C19F9500424B97 /* Project object */;
+}
