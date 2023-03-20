@@ -10,8 +10,10 @@ import PhotosUI
 
 struct ContentView: View {
     @State private var isShowPhotoLibrary = false
+    @State private var isDone = true
+    @State private var showForm = false
+    @State var question: String = ""
         @State private var image = UIImage()
-     
         var body: some View {
             VStack {
      
@@ -23,12 +25,14 @@ struct ContentView: View {
      
                 Button(action: {
                     self.isShowPhotoLibrary = true
+                    self.isDone = false
+                    
                 }) {
                     HStack {
                         Image(systemName: "photo")
                             .font(.system(size: 20))
      
-                        Text("Photo library")
+                        Text("Upload a photo")
                             .font(.headline)
                     }
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
@@ -37,9 +41,30 @@ struct ContentView: View {
                     .cornerRadius(20)
                     .padding(.horizontal)
                 }
+                Button("Done") {
+                    self.showForm = true
+                    }
+                .disabled(self.isDone)
+                .sheet(isPresented: $showForm) {
+                    Form{
+                        TextField("Question", text: $question)
+                    }
+                    Button(action: {
+                                            print("Perform an action here...")
+                                        }) {
+                                            Text("Submit Question")
+                                        }
+                }
+                
+                
+            
+                
             }.sheet(isPresented: $isShowPhotoLibrary) {
                 ImagePicker(selectedImage: self.$image,sourceType: .photoLibrary )
+                
             }
+            
+            
     
     }
 }
