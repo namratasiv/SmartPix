@@ -15,6 +15,8 @@
 		9C899FFA29C19F9700424B97 /* SmartPixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C899FF929C19F9700424B97 /* SmartPixUITests.swift */; };
 		9C899FFC29C19F9700424B97 /* SmartPixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C899FFB29C19F9700424B97 /* SmartPixUITestsLaunchTests.swift */; };
 		9C89A00A29C1A10000424B97 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C89A00929C1A10000424B97 /* PythonKit */; };
+		9CD0AAFD29C2FAB600E14C81 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0AAFC29C2FAB600E14C81 /* FormView.swift */; };
+		9CD0AAFF29C3043B00E14C81 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0AAFE29C3043B00E14C81 /* UploadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		9C899FF529C19F9700424B97 /* SmartPixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartPixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C899FF929C19F9700424B97 /* SmartPixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPixUITests.swift; sourceTree = "<group>"; };
 		9C899FFB29C19F9700424B97 /* SmartPixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9CD0AAFC29C2FAB600E14C81 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		9CD0AAFE29C3043B00E14C81 /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +102,10 @@
 			children = (
 				9C899FDE29C19F9500424B97 /* SmartPixApp.swift */,
 				9C899FE029C19F9500424B97 /* ContentView.swift */,
+				9CD0AAFC29C2FAB600E14C81 /* FormView.swift */,
 				9C899FE229C19F9700424B97 /* Assets.xcassets */,
 				9C899FE429C19F9700424B97 /* Preview Content */,
+				9CD0AAFE29C3043B00E14C81 /* UploadImage.swift */,
 			);
 			path = SmartPix;
 			sourceTree = "<group>";
@@ -265,6 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD0AAFF29C3043B00E14C81 /* UploadImage.swift in Sources */,
+				9CD0AAFD29C2FAB600E14C81 /* FormView.swift in Sources */,
 				9C899FE129C19F9500424B97 /* ContentView.swift in Sources */,
 				9C899FDF29C19F9500424B97 /* SmartPixApp.swift in Sources */,
 			);
