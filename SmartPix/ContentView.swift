@@ -7,21 +7,21 @@
 
 import SwiftUI
 import PhotosUI
-
 struct ContentView: View {
     @State private var isShowPhotoLibrary = false
     @State private var isDone = true
     @State private var showForm = false
-    @State var question: String = ""
+    
         @State private var image = UIImage()
         var body: some View {
+            
             VStack {
-     
                 Image(uiImage: self.image)
                     .resizable()
                     .scaledToFill()
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .edgesIgnoringSafeArea(.all)
+                    //.overlay(ImageOverlay(), alignment: .top)
      
                 Button(action: {
                     self.isShowPhotoLibrary = true
@@ -46,28 +46,50 @@ struct ContentView: View {
                     }
                 .disabled(self.isDone)
                 .sheet(isPresented: $showForm) {
-                    Form{
-                        TextField("Question", text: $question)
-                    }
-                    Button(action: {
-                                            print("Perform an action here...")
-                                        }) {
-                                            Text("Submit Question")
-                                        }
+                    Color.white
+                            .presentationDetents([.fraction(0.4)])
+                    NavigationView{
+                        SecondView()
+                    }.navigationBarTitle("")
+                        .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(true)
                 }
-                
-                
-            
                 
             }.sheet(isPresented: $isShowPhotoLibrary) {
                 ImagePicker(selectedImage: self.$image,sourceType: .photoLibrary )
                 
             }
-            
-            
-    
     }
 }
+
+struct SecondView: View {
+    @State var question: String = ""
+    @State private var showAnswer = false
+    var body: some View {
+        Form{
+            
+            Section(header: Text("Ask Anything")){
+                TextField("Question", text: $question)
+            }
+                Button(action: {
+                    print("Replicate called here")
+                    self.showAnswer = true
+                    }) {
+                        Text("Submit Question")
+                    }.sheet(isPresented: $showAnswer) {
+                        Color.white
+                                .presentationDetents([.fraction(0.4)])
+                        Text("Print Answer Here").foregroundColor(.primary).font(.title)
+                        
+                    }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(20)
+                .padding(.horizontal)
+        }
+    }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
