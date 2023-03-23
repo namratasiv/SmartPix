@@ -13,7 +13,7 @@ def hello_world():
             f.write(base64.b64decode(json['image']))
         
         import os
-        os.environ['REPLICATE_API_TOKEN'] = '92b599e3752ffb2ccba56c4564e2ffd6a06d112a'
+        os.environ['REPLICATE_API_TOKEN'] = 'xxxxxxxxx564e2ffd6a06d112a'
         os.getenv("REPLICATE_API_TOKEN", default=None)
         import replicate
         model = replicate.models.get("salesforce/blip-2")
