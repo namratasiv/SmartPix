@@ -59,6 +59,7 @@ struct ContentView: View {
 
 struct SecondView: View {
     @State var question: String = ""
+    @State var result: String = ""
     @State private var showAnswer = false
     @Binding var image:UIImage
     var body: some View {
@@ -69,21 +70,23 @@ struct SecondView: View {
             }
             Button(action: {
                 Task{
-                    do {
-                        try await print(replicate(img:self.image))
-                    } catch RequestError.invalidURL{
-                        print("invalid URL")
-                    } catch RequestError.missingData{
-                        print("missing data")
+                    printMessagesForUser(question: $question.wrappedValue, img: image){ (output) in
+                        print("Output printing in 73")
+                        print(output)
+                        result = output
+                        self.showAnswer = true
+                        
                     }
                     
-                    self.showAnswer = true
-                }}) {
+                }
+                
+            }) {
                         Text("Submit Question")
                     }.sheet(isPresented: $showAnswer) {
                         Color.white
                                 .presentationDetents([.fraction(0.4)])
-                        Text("Print Answer Here").foregroundColor(.primary).font(.title)
+                        ThirdView(result:$result)
+                        //Text(result).font(.title)
                         
                     }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
                 .background(Color.blue)
@@ -93,6 +96,55 @@ struct SecondView: View {
         }
     }
 }
+struct ThirdView: View {
+    @Binding var result:String
+    var body: some View {
+        VStack{
+            Text(result)
+        }
+    }
+}
+func printMessagesForUser(question: String, img: UIImage, completionBlock: @escaping (String) -> Void) -> Void {
+            print("Enter flask post!!!!")
+    let imageData:NSData = img.pngData()! as NSData
+    let strBase64:String = imageData.base64EncodedString(options: [])
+//    //print(path.base64EncodedData())
+    let json = ["question":question, "image":strBase64 ] as [String : Any]
+    //let json = ["question": question]
+    //let jsonData =  try JSONSerialization.dataWithJSONObject(attdList, options: .prettyPrinted) // first of all convert json to the data
+        
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+                //let convertedString = String(data: jsonData, encoding: .utf8)
+                let url = NSURL(string: "http://127.0.0.1:5000/replicate")!
+                let request = NSMutableURLRequest(url: url as URL)
+                request.httpMethod = "POST"
+                
+                request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+                request.httpBody = jsonData
+                
+                let task = URLSession.shared.dataTask(with: request as URLRequest){ data, response, error in
+                    if error != nil{
+                        print("Error -> \(error)")
+                        return
+                    }
+                    do {
+                        let result = try String(data: data!, encoding: String.Encoding.utf8) as String?
+                        print("Result -> \(result)")
+                        completionBlock(result.unsafelyUnwrapped)
+                        
+                    } catch {
+                        let result = ""
+                        print("Error -> \(error)")
+                    }
+                }
+                
+                task.resume()
+            } catch {
+                print(error)
+            }
+        }
+
 
 
 struct ContentView_Previews: PreviewProvider {
