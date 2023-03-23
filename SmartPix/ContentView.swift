@@ -1,22 +1,17 @@
-//
-//  ContentView.swift
-//  SmartPix
-//
-//  Created by Sivakumar, Namrata on 15/03/23.
-//
-
 import SwiftUI
 import PhotosUI
+
+
 struct ContentView: View {
     @State private var isShowPhotoLibrary = false
     @State private var isDone = true
     @State private var showForm = false
+    @State private var inputImage : UIImage=UIImage()
     
-        @State private var image = UIImage()
         var body: some View {
             
             VStack {
-                Image(uiImage: self.image)
+                Image(uiImage: self.inputImage)
                     .resizable()
                     .scaledToFill()
                     .frame(minWidth: 0, maxWidth: .infinity)
@@ -49,14 +44,14 @@ struct ContentView: View {
                     Color.white
                             .presentationDetents([.fraction(0.4)])
                     NavigationView{
-                        SecondView()
+                        SecondView(image:self.$inputImage)
                     }.navigationBarTitle("")
                         .navigationBarHidden(true)
                         .navigationBarBackButtonHidden(true)
                 }
                 
             }.sheet(isPresented: $isShowPhotoLibrary) {
-                ImagePicker(selectedImage: self.$image,sourceType: .photoLibrary )
+                ImagePicker(selectedImage: self.$inputImage,sourceType: .photoLibrary )
                 
             }
     }
@@ -65,16 +60,25 @@ struct ContentView: View {
 struct SecondView: View {
     @State var question: String = ""
     @State private var showAnswer = false
+    @Binding var image:UIImage
     var body: some View {
         Form{
             
             Section(header: Text("Ask Anything")){
                 TextField("Question", text: $question)
             }
-                Button(action: {
-                    print("Replicate called here")
+            Button(action: {
+                Task{
+                    do {
+                        try await print(replicate(img:self.image))
+                    } catch RequestError.invalidURL{
+                        print("invalid URL")
+                    } catch RequestError.missingData{
+                        print("missing data")
+                    }
+                    
                     self.showAnswer = true
-                    }) {
+                }}) {
                         Text("Submit Question")
                     }.sheet(isPresented: $showAnswer) {
                         Color.white
@@ -97,4 +101,3 @@ struct ContentView_Previews: PreviewProvider {
     }
     
 }
-
