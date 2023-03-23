@@ -15,6 +15,7 @@
 		9C899FFA29C19F9700424B97 /* SmartPixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C899FF929C19F9700424B97 /* SmartPixUITests.swift */; };
 		9C899FFC29C19F9700424B97 /* SmartPixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C899FFB29C19F9700424B97 /* SmartPixUITestsLaunchTests.swift */; };
 		9C89A00A29C1A10000424B97 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C89A00929C1A10000424B97 /* PythonKit */; };
+		9CB2CADA29CC238A00D5D89C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9CB2CAD929CC238A00D5D89C /* README.md */; };
 		9CD0AAFF29C3043B00E14C81 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0AAFE29C3043B00E14C81 /* UploadImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		9C899FF529C19F9700424B97 /* SmartPixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartPixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C899FF929C19F9700424B97 /* SmartPixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPixUITests.swift; sourceTree = "<group>"; };
 		9C899FFB29C19F9700424B97 /* SmartPixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9CB2CAD929CC238A00D5D89C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9CD0AAFE29C3043B00E14C81 /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		9C899FD229C19F9500424B97 = {
 			isa = PBXGroup;
 			children = (
+				9CB2CAD929CC238A00D5D89C /* README.md */,
 				9C899FDD29C19F9500424B97 /* SmartPix */,
 				9C899FEE29C19F9700424B97 /* SmartPixTests */,
 				9C899FF829C19F9700424B97 /* SmartPixUITests */,
@@ -242,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB2CADA29CC238A00D5D89C /* README.md in Resources */,
 				9C899FE629C19F9700424B97 /* Preview Assets.xcassets in Resources */,
 				9C899FE329C19F9700424B97 /* Assets.xcassets in Resources */,
 			);
