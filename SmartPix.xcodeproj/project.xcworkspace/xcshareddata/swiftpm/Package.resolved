@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "laden",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vinhnx/Laden",
+      "state" : {
+        "revision" : "50b02e73c657ee8a9868b9ab7d5ac84c5c7e32f2",
+        "version" : "0.1.0"
+      }
+    },
+    {
       "identity" : "pythonkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pvieito/PythonKit.git",

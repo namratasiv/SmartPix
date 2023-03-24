@@ -1,6 +1,6 @@
 import SwiftUI
 import PhotosUI
-
+import Laden
 
 struct ContentView: View {
     @State private var isShowPhotoLibrary = false
@@ -39,6 +39,7 @@ struct ContentView: View {
                 Button("Done") {
                     self.showForm = true
                     }
+                .foregroundColor(Color.blue)
                 .disabled(self.isDone)
                 .sheet(isPresented: $showForm) {
                     
@@ -49,6 +50,7 @@ struct ContentView: View {
                         .navigationBarHidden(true)
                         .navigationBarBackButtonHidden(true)
                         .presentationDetents([.fraction(0.4)])
+                        .padding(35)
                 }
                 
             }.sheet(isPresented: $isShowPhotoLibrary) {
@@ -62,28 +64,30 @@ struct SecondView: View {
     @State var question: String = ""
     @State var result: String = ""
     @State private var showAnswer = false
+    @State private var disableSubmit = false
     @Binding var image:UIImage
+    @State private var isLoading = false
     var body: some View {
         Form{
             
             Section(header: Text("Ask Anything")){
                 TextField("Question", text: $question)
-            }
+            }.padding(5)
+                .cornerRadius(20)
             Button(action: {
                 Task{
+                    self.isLoading = true
+                    self.disableSubmit = true
                     printMessagesForUser(question: $question.wrappedValue, img: image){ (output) in
                         //print("Output printing in 73")
                         //print(output)
                         self.result = output
                         self.showAnswer = true
                     }
-                    
                 }
-                
-                
             }) {
                         Text("Submit Question")
-                    }.sheet(isPresented: $showAnswer) {
+            }.disabled(self.disableSubmit).sheet(isPresented: $showAnswer) {
                         NavigationView{
                             ThirdView(result:$result)
                         }.navigationBarTitle("")
@@ -96,6 +100,15 @@ struct SecondView: View {
                 .foregroundColor(.white)
                 .cornerRadius(20)
                 .padding(.horizontal)
+            HStack {
+                if isLoading {
+                    
+                    Text("Please wait while we fetch your answer..").font(.caption2) // your content view
+                    Laden.CircleLoadingView( color: .blue , strokeLineWidth: 3)
+                } else {
+                    Text("")
+                }
+            }
         }
     }
 }
@@ -104,7 +117,7 @@ struct ThirdView: View {
     var body: some View {
         VStack{
             //Text("thirdview")
-            Text(result).font(.title)
+            Text(result).font(.title).foregroundColor(.primary)
         }
     }
 }
