@@ -41,13 +41,14 @@ struct ContentView: View {
                     }
                 .disabled(self.isDone)
                 .sheet(isPresented: $showForm) {
-                    Color.white
-                            .presentationDetents([.fraction(0.4)])
+                    
+                            
                     NavigationView{
                         SecondView(image:self.$inputImage)
                     }.navigationBarTitle("")
                         .navigationBarHidden(true)
                         .navigationBarBackButtonHidden(true)
+                        .presentationDetents([.fraction(0.4)])
                 }
                 
             }.sheet(isPresented: $isShowPhotoLibrary) {
@@ -71,22 +72,25 @@ struct SecondView: View {
             Button(action: {
                 Task{
                     printMessagesForUser(question: $question.wrappedValue, img: image){ (output) in
-                        print("Output printing in 73")
-                        print(output)
-                        result = output
+                        //print("Output printing in 73")
+                        //print(output)
+                        self.result = output
                         self.showAnswer = true
                         
                     }
                     
                 }
                 
+                
             }) {
                         Text("Submit Question")
                     }.sheet(isPresented: $showAnswer) {
-                        Color.white
-                                .presentationDetents([.fraction(0.4)])
-                        ThirdView(result:$result)
-                        //Text(result).font(.title)
+                        NavigationView{
+                            ThirdView(result:$result)
+                        }.navigationBarTitle("")
+                            .navigationBarHidden(true)
+                            .navigationBarBackButtonHidden(true)
+                            .presentationDetents([.fraction(0.4)])
                         
                     }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
                 .background(Color.blue)
@@ -100,7 +104,8 @@ struct ThirdView: View {
     @Binding var result:String
     var body: some View {
         VStack{
-            Text(result)
+            //Text("thirdview")
+            Text(result).font(.title)
         }
     }
 }
