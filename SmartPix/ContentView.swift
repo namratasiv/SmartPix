@@ -76,7 +76,6 @@ struct SecondView: View {
                         //print(output)
                         self.result = output
                         self.showAnswer = true
-                        
                     }
                     
                 }
